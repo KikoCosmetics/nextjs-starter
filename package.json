@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
+    "dev:base": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -14,16 +15,29 @@
     "test": "jest",
     "format": "prettier -w .",
     "format:check": "prettier -c .",
-    "postbuild": "next-sitemap --config next-sitemap.config.js",
-    "prepare": "husky install"
+    "postbuild": "next-sitemap --config next-sitemap.config.js"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@hookform/resolvers": "^3.1.0",
+    "@mui/material": "^5.11.8",
+    "@ungap/structured-clone": "^1.0.2",
     "clsx": "^1.2.1",
+    "firebase": "^9.19.1",
     "next": "^13.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.9",
     "react-icons": "^4.7.1",
-    "tailwind-merge": "^1.8.1"
+    "recoil": "^0.7.7",
+    "rxjs": "~7.5.7",
+    "tailwind-merge": "^1.8.1",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.3.0",
@@ -33,6 +47,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/react": "^18.0.27",
+    "@types/ungap__structured-clone": "^0.3.0",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
     "autoprefixer": "^10.4.13",
@@ -41,7 +56,6 @@
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
-    "husky": "^7.0.4",
     "jest": "^27.5.1",
     "lint-staged": "^12.5.0",
     "next-router-mock": "^0.7.5",
@@ -49,6 +63,7 @@
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
     "prettier-plugin-tailwindcss": "^0.1.13",
+    "sass": "^1.59.3",
     "tailwindcss": "^3.2.4",
     "typescript": "^4.9.4"
   },
